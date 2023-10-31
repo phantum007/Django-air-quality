@@ -4,9 +4,7 @@
 {% block content %}
 <p>
    
-    {% if zipcode %}
-    <h1>Zipcode</h1> {{zipcode}}
-        {% endif%}
+   
 
     <br>
     <br>
@@ -16,8 +14,11 @@
       <div class="jumbotron">
         <h1 class="display-4">Air Quality : {{api.0.AQI}}</h1>
 
-      
+        {% if api.0.zipcode %}
 
+        <h5 class="display-8"> zipcode : {{api.0.zipcode}}</h5>
+      
+            {% endif%}
         <table class="table">
            
             <tbody>

@@ -13,7 +13,6 @@ def home(request):
             api_request = requests.get(urlss)
             api_res = json.loads(api_request.content)
             api_res[0]["zipcode"]= zipcode
-            print(api_res)
             return render(request,'home.html',{"api":api_res})
         except: 
             return render(request,'error.html',{})
