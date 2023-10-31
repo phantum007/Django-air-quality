@@ -3,39 +3,44 @@
 
 {% block content %}
 <p>
-    {% for item in api %}
- 
-      <br>
-      <br>
-      {% endfor %}
+   
+    {% if zipcode %}
+    <h1>Zipcode</h1> {{zipcode}}
+        {% endif%}
+
+    <br>
+    <br>
+    <br>
    
       {% if api%}
       <div class="jumbotron">
         <h1 class="display-4">Air Quality : {{api.0.AQI}}</h1>
+
+      
 
         <table class="table">
            
             <tbody>
               <tr>
                 <th scope="row">LocalTimeZone</th>
-                <td>{{pi.0.LocalTimeZone}}</td>
+                <td>{{api.0.LocalTimeZone}}</td>
                 <th scope="row">ReportingArea</th>
-                <td>{{pi.0.ReportingArea}}</td>
+                <td>{{api.0.ReportingArea}}</td>
               </tr>
              
               <tr>
                 <th scope="row">ReportingArea</th>
-                <td>{{pi.0.ReportingArea}}</td>
+                <td>{{api.0.ReportingArea}}</td>
                 <th scope="row">StateCode</th>
-                <td>{{pi.0.StateCode}}</td>
+                <td>{{api.0.StateCode}}</td>
               </tr>
              
     
               <tr>
                 <th scope="row">Latitude</th>
-                <td>{{pi.0.Latitude}}</td>
+                <td>{{api.0.Latitude}}</td>
                 <th scope="row">DateObserved</th>
-                <td>{{pi.0.DateObserved}}</td>
+                <td>{{api.0.DateObserved}}</td>
               </tr>
             
             
