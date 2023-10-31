@@ -2,6 +2,48 @@
 
 
 {% block content %}
-<h1>Hello world</h1>
+<p>
+    {% for item in api %}
+ 
+      <br>
+      <br>
+      {% endfor %}
+   
+      {% if api%}
+      <div class="jumbotron">
+        <h1 class="display-4">Air Quality : {{api.0.AQI}}</h1>
 
+        <table class="table">
+           
+            <tbody>
+              <tr>
+                <th scope="row">LocalTimeZone</th>
+                <td>{{pi.0.LocalTimeZone}}</td>
+                <th scope="row">ReportingArea</th>
+                <td>{{pi.0.ReportingArea}}</td>
+              </tr>
+             
+              <tr>
+                <th scope="row">ReportingArea</th>
+                <td>{{pi.0.ReportingArea}}</td>
+                <th scope="row">StateCode</th>
+                <td>{{pi.0.StateCode}}</td>
+              </tr>
+             
+    
+              <tr>
+                <th scope="row">Latitude</th>
+                <td>{{pi.0.Latitude}}</td>
+                <th scope="row">DateObserved</th>
+                <td>{{pi.0.DateObserved}}</td>
+              </tr>
+            
+            
+             
+            </tbody>
+          </table>
+      </div>
+      {% endif %}
+
+</p>
 {% endblock %}
