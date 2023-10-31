@@ -1,0 +1,6 @@
+venv-air/bin/
+venv-air/lib/
+.env/
+__pycache__/
+*.pyc
+*.pyo
